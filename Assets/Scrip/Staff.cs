@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Staff : MonoBehaviour
 {
-    private int id;
-    public int ID { get { return id; } set { id = value; } }
+    private int _id;
+    public int ID { get { return _id; } set { _id = value; } }
 
     private int charSkinId;
     public int CharShinID { get { return charSkinId; } set { charSkinId = value; } }
@@ -13,4 +14,23 @@ public class Staff : MonoBehaviour
 
     public string staffName;
     public int dailyWage;
+
+    public void InitCharID(int id)
+    {
+        _id = id;
+        charSkinId = Random.Range(0, charSkin.Length - 1);
+        staffName = "XXXX";
+        dailyWage = Random.Range(80, 125);
+    }
+
+    public void ChangeCharSkin()
+    {
+        for (int i = 0; i < charSkin.Length; i++)
+        {
+            if ( i == CharShinID)
+                charSkin[i].SetActive(true);
+            else 
+                charSkin[i].SetActive(false);
+        }
+    }
 }

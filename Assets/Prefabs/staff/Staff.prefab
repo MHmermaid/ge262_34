@@ -1230,6 +1230,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c2d6bbfa6714b04ea35826014207603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charSkin:
+  - {fileID: 1719133026623802}
+  - {fileID: 1974049927722618}
+  - {fileID: 1476073852342470}
+  - {fileID: 1723542237869448}
+  - {fileID: 1772410112290960}
+  staffName: 
+  dailyWage: 0
 --- !u!1 &1703637963276046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,7 +1413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4137135469034742
 Transform:
   m_ObjectHideFlags: 0
