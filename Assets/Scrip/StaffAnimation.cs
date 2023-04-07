@@ -19,7 +19,7 @@ public class StaffAnimation : MonoBehaviour
         if (_staff.State == UnitState.Idle)
         {
             DisableAll();
-            _anim.SetBool("isWalk",true);
+            _anim.SetBool("isIdle",true);
         }
 
         if (_staff.State == UnitState.Walk)
