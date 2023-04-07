@@ -22,7 +22,7 @@ public class StaffAnimation : MonoBehaviour
             DisableAll();
             _anim.SetBool("isIdle", true);
         }
-        if (_staff.State ++ UnitState.Walk)
+        if (_staff.State == UnitState.Walk)
         {
             DisableAll();
             _anim.SetBool("iswalk", true);
