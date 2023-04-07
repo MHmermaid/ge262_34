@@ -1211,7 +1211,7 @@ Animator:
   m_GameObject: {fileID: 1674885529865632}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 0125309e38bea8a48bc578cf8f220634, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b62c353c43b66a44a4e5ff5aab008da, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1241,6 +1241,8 @@ MonoBehaviour:
   - {fileID: 1772410112290960}
   staffName: 
   dailyWage: 0
+  state: 1
+  navAgent: {fileID: 0}
 --- !u!114 &8230129829379884448
 MonoBehaviour:
   m_ObjectHideFlags: 0

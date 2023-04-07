@@ -7,7 +7,6 @@ public class StaffAnimation : MonoBehaviour
     private Animator _anim;
     private Staff _staff;
     
-    
     void Awake()
     {
         _anim = GetComponent<Animator>();
@@ -20,12 +19,13 @@ public class StaffAnimation : MonoBehaviour
         if (_staff.State == UnitState.Idle)
         {
             DisableAll();
-            _anim.SetBool("isIdle", true);
+            _anim.SetBool("isWalk",true);
         }
+
         if (_staff.State == UnitState.Walk)
         {
             DisableAll();
-            _anim.SetBool("iswalk", true);
+            _anim.SetBool("isWalk", true);
         }
     }
 
