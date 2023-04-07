@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] float minZoomDist;
-    [SerializeField] float maxZommDist;
+    [SerializeField] private float minZoomDist;
+    [SerializeField] private float maxZommDist;
+    [SerializeField] private float zoomSpeed;
+    [SerializeField] private float zoomModifier;
 
-    [SerializeField] float zoomSpeed;
-    [SerializeField] float zoomModifier;
+    [SerializeField] private float moveSpeed;
+    
 
     private Camera cam;
     
@@ -22,6 +24,7 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         Zoom();
+        MoveByKB();
     }
 
     private void Zoom()
@@ -36,5 +39,15 @@ public class CameraController : MonoBehaviour
             return;
 
         cam.transform.position += cam.transform.forward * zoomModifier * zoomSpeed;
+    }
+
+    private void MoveByKB()
+    {
+        float xInput = Input.GetAxis("Horizontal");
+        float zInput = Input.GetAxis("Vertical");
+
+        Vector3 dir = transform.forward * zInput + transform.right * xInput;
+
+        transform.position += dir * moveSpeed * Time.deltaTime;
     }
 }
