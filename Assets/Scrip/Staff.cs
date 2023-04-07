@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Staff : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private int id;
+    public int ID { get { return id; } set { id = value; } }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private int charSkinId;
+    public int CharShinID { get { return charSkinId; } set { charSkinId = value; } }
+    public GameObject[] charSkin;
+
+    public string staffName;
+    public int dailyWage;
 }
