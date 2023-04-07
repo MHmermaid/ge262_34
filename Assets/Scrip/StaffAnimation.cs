@@ -4,15 +4,34 @@ using UnityEngine;
 
 public class StaffAnimation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Animator _anim;
+    private Staff _staff;
+    
+    
+    void Awake()
     {
-        
+        _anim = GetComponent<Animator>();
+        _staff = GetComponent<Staff>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (_staff.State == UnitState.Idle)
+        {
+            DisableAll();
+            _anim.SetBool("isIdle", true);
+        }
+        if (_staff.State ++ UnitState.Walk)
+        {
+            DisableAll();
+            _anim.SetBool("iswalk", true);
+        }
+    }
+
+    private void DisableAll()
+    {
+        _anim.SetBool("isIdle", false);
+        _anim.SetBool("isWalk", false);
     }
 }
